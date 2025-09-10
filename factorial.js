@@ -2,7 +2,7 @@ const readline=require("readline");
 
 const r1 = readline.createInterface({
 input:process.stdin,
-output: process.stdn
+output: process.stdout
 
 })
 
@@ -56,21 +56,21 @@ r1.question("Please enter a number for factorial: ", numStr =>{
 
 function exitProgram (){
     console.log("Exiting Application");
-    rl.close();
+    r1.close();
     console.clear();
     }
 
 function backToMenu(){
     console.log("-------------------------");
-    console.log("1. back toMenu");
+    console.log("1. back to menu");
     console.log("2. Exit");
     
     r1.question("What would you like to do next? (1-2): ", choice =>{
 
-if (backToMenuchoice === "1"){
+if (backToMenuChoice === "1"){
     console.clear();
     mainMenu();
-} else if (backToMenchoice === "2"){
+} else if (backToMenuChoice === "2"){
     exitProgram ();
 }else {
     console.log("Invalid Choice. Please Try Again");
