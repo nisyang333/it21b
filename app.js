@@ -11,7 +11,7 @@ class Person{
         this.message = message;
 }
  displayInfo(){
-    console.log("Name:" + tjis.name);
+    console.log("Name:" + this.name);
     console.log("Age:" + this.age);
     console.log("Occupation:" + this.occupation);
     console.log("Message:" + this.message);
