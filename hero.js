@@ -22,10 +22,14 @@ showStats(){
     console.log("---------------------");
 }
 }
-
-const hero1 = new Hero("Thorin",100,10);
+class Warrior extends Hero {
+    useAbility(){
+        console.log('${this.name} user Power Strike');
+    }
+}
+const warrior = new Warrior("Thorin",100,10);
 const hero2 = new Hero("Gandolf",100,8);
 
 
-hero1.showStats();
-hero2.showStats();
+Thorin.useAbility();
+
