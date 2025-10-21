@@ -6,4 +6,57 @@
 <title> Radar Charts</title>
 </head>
 <body>
-   
+    <h1>Radar Charts</h1>
+    <div>
+        <canvas id="radarChart"></canvas>
+    </div>
+</body>
+<script>
+    class radarChart{
+        constructor(canvasId,dataUrl){
+            this.canvasId = canvasId;
+            this.dataUrl = dataUrl;
+            this.chart = null;
+        }
+        renderChart (data){
+            const ctx =  document.getElementById (this.canvasId).getContext("2d");
+
+            this.chart =new Chart(ctx,{
+                type:"radar",
+                data:{
+                    //Labels
+                    labels:data.labels,
+                    //Datasets
+                    datasets:data.datasets
+                },
+                options:{
+                    responsive:true,
+                    plugins:{
+                        legend:{
+                            position:"top"
+                        },
+                        title:{
+                            display:true,
+                            //title
+                            text:"Radar Chart"
+                        }
+                    },
+                    scales:{
+                        r:{
+                            angleLines:{display:true},
+                            suggestedMin:0,
+                            suggestedMax:100
+
+                            }
+                        }
+                    }
+                        
+                        
+                    });
+                }
+            };
+        
+        
+    
+</script>
+</html>
