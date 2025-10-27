@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Line Chart</title>
-</head>
-<body>
-    <h1>Line Chart</h1>
-    <div>
-        <canvas id="lineChart"></canvas>
-    </div>
-    
-</body>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-      class LineChart{
+ class LineChart{
         constructor(canvasId, dataUrl){
             this.canvasId = canvasId;
             this.dataUrl = dataUrl;
@@ -74,7 +58,4 @@
         const chart = new LineChart("lineChart","linedata.json");
         chart.init();
     });
-
-</script>
-</html>
 
